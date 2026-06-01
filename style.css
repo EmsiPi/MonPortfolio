@@ -149,7 +149,7 @@ nav ul li a:hover {
 
 .bg-light {
     background-color: rgb(75, 100, 70);
-    max-width: 100%;
+    clip-path: ellipse(110% 75% at 50% 75%);
 }
 
 h2 {
@@ -258,6 +258,7 @@ h2::after {
 .timeline-item {
     position: relative;
     margin-bottom: 40px;
+    border-radius: 50px;
 }
 
 .timeline-item::before {
