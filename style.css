@@ -73,6 +73,11 @@ nav ul li a:hover {
     color: var(--primary);
 }
 
+.menuBtnAnim:active {
+    color: var(--bord-contraste);
+    transform: translate(2px, 2px);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
@@ -97,25 +102,37 @@ nav ul li a:hover {
 }
 
 .btnAnim {
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
     display: inline-block;
-    background-color: var(--primary);
-    color: var(--white);
-    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    /*transition: background 0.3s;*/
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     -webkit-transition: background-color 1000ms linear;
     -ms-transition: background-color 1000ms linear;
     transition: background-color 1000ms cubic-bezier(0, -0.55, 0.27, 1.55);
-    -webkit-transition: color 500ms linear;
-    -ms-transition: color 500ms linear;
-    transition: color 500ms cubic-bezier(0, -0.55, 0.27, 1.55);
+    -webkit-transition: color 1000ms linear;
+    -ms-transition: color 1000ms linear;
+    transition: color 1000ms cubic-bezier(0, -0.55, 0.27, 1.55);
 }
 
 .btnAnim:hover {
     background-color: #1b5e20;
     color: var(--bord-contraste);
+}
+
+.btnAnim:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
 
 /* Sections communes */
@@ -250,6 +267,17 @@ h2::after {
     top: 5px;
     width: 12px;
     height: 12px;
+    border-radius: 10%;
+    background-color: var(--primary);
+}
+
+.en-cours::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: var(--primary);
 }
@@ -270,7 +298,6 @@ h2::after {
 
 .highlight-item::before {
     left: -31px;
-
     top: 20px;
 }
 
