@@ -96,7 +96,7 @@ nav ul li a:hover {
     color: #555;
 }
 
-.btn {
+.btnAnim {
     display: inline-block;
     background-color: var(--primary);
     color: var(--white);
@@ -104,11 +104,18 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background 0.3s;
+    /*transition: background 0.3s;*/
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms cubic-bezier(0, -0.55, 0.27, 1.55);
+    -webkit-transition: color 500ms linear;
+    -ms-transition: color 500ms linear;
+    transition: color 500ms cubic-bezier(0, -0.55, 0.27, 1.55);
 }
 
-.btn:hover {
+.btnAnim:hover {
     background-color: #1b5e20;
+    color: var(--bord-contraste);
 }
 
 /* Sections communes */
