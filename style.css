@@ -2,7 +2,7 @@
 :root {
     --primary: #2e7d32;
     /* Vert nature */
-    --primary-light: #e8f5e9;
+    --primary-light: #e4fddf;
     /* Vert très clair pour les fonds */
     --accent: #1565c0;
     /* Bleu discret pour le contraste */
@@ -87,6 +87,7 @@ nav ul li a:hover {
     background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
     padding: 100px 20px;
     text-align: center;
+    clip-path: ellipse(120% 70% at 100% 30%);
 }
 
 .hero h1 {
@@ -154,6 +155,9 @@ nav ul li a:hover {
 .bg-light {
     background-color: rgb(75, 100, 70);
     clip-path: ellipse(125% 75% at 50% 75%);
+    max-width: none;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
@@ -185,6 +189,7 @@ h2::after {
 }
 
 /* Grille des projets */
+
 .projects-grid {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
@@ -240,6 +245,18 @@ h2::after {
     margin-bottom: 10px;
 }
 
+#projects h2 {
+    text-align: center;
+}
+
+#projects h2::after {
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
 .tag {
     display: inline-block;
     background-color: var(--primary-light);
@@ -251,6 +268,7 @@ h2::after {
     margin-top: 15px;
     margin-right: 5px;
 }
+
 
 /* Timeline */
 .timeline {
@@ -304,6 +322,57 @@ h2::after {
 .highlight-item::before {
     left: -31px;
     top: 20px;
+}
+
+.contact img {
+    width: 25px;
+    height: 25px;
+    align-items: center;
+}
+
+.contact p.tag {
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.contact p {
+    margin-left: 15px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+
+.ensembleContact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#contact h3 {
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: start;
+}
+
+#contact h3::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary);
+    margin-top: 10px;
 }
 
 /* Footer */
