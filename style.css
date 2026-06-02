@@ -15,6 +15,10 @@
     --bord-contraste: #ffbc2b;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Reset de base */
 * {
     margin: 0;
@@ -149,7 +153,7 @@ nav ul li a:hover {
 
 .bg-light {
     background-color: rgb(75, 100, 70);
-    clip-path: ellipse(110% 75% at 50% 75%);
+    clip-path: ellipse(125% 75% at 50% 75%);
 }
 
 h2 {
