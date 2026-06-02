@@ -211,9 +211,9 @@ h2::after {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s, box-shadow 0.3s;
     border-left: 10px solid var(--bord-contraste);
-    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    border-top: 0px solid rgba(0, 0, 0, 0.02);
     border-right: 1px solid rgba(0, 0, 0, 0.02);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.02);
 }
 
 .project-card a {
