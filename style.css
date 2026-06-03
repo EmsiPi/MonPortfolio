@@ -329,6 +329,7 @@ h2::after {
     height: 25px;
     align-items: center;
     margin-left: 20px;
+        margin-right: 25px;
 }
 
 .contact p.tag {
