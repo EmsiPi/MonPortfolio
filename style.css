@@ -1,4 +1,5 @@
 /* Variables de couleur inspirées de la nature */
+/*TEST*/
 :root {
     --primary: #2e7d32;
     /* Vert nature */
@@ -32,6 +33,17 @@ body {
     color: var(--dark);
     line-height: 1.6;
     background-color: var(--white);
+}
+
+html, body {
+    -ms-overflow-style: none;  /* IE et Edge */
+    scrollbar-width: none;     /* Firefox (Standard) */
+}
+
+/* Optionnel pour Chrome/Safari/Blink au cas où */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Navigation */
@@ -324,7 +336,6 @@ h2::after {
     left: -31px;
     top: 20px;
 }
-
 
 .contact img {
     width: 25px;
