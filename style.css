@@ -1,8 +1,10 @@
 /* Variables de couleur inspirées de la nature */
+/*TEST*/
 :root {
     --primary: #2e7d32;
     /* Vert nature */
-    --primary-light: #e4fddf;
+    --primary-light: #dff6da;
+    --primary-light2: #c4fab9;
     /* Vert très clair pour les fonds */
     --accent: #1565c0;
     /* Bleu discret pour le contraste */
@@ -34,6 +36,20 @@ body {
     color: var(--dark);
     line-height: 1.6;
     background-color: var(--white);
+}
+
+html,
+body {
+    -ms-overflow-style: none;
+    /* IE et Edge */
+    scrollbar-width: none;
+    /* Firefox (Standard) */
+}
+
+/* Optionnel pour Chrome/Safari/Blink au cas où */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* Navigation */
@@ -87,7 +103,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--primary-light2) 0%, #ffffff 100%);
     padding: 100px 20px;
     text-align: center;
     clip-path: ellipse(120% 70% at 100% 30%);
@@ -330,8 +346,44 @@ h2::after {
 
 .contact img {
     width: 25px;
-    height: 25px;
+    height: auto;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.gmail img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.discord img {
+    width: 30px;
+    margin-bottom: 0px;
+}
+
+.gridContact {
+    display: inline-block;
+}
+
+
+.content {
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity 0.5s ease;
+}
+
+.gridContact:hover .content {
+    opacity: 1;
+}
+
+.gridContact:hover .contact {
+    max-width: 350px;
+}
+
+.gridContact:hover .discord {
+    width: 200px;
 }
 
 .contact p.tag {
@@ -346,10 +398,14 @@ h2::after {
     display: flex;
     flex-direction: row;
     text-align: center;
+    width: auto;
+    max-width: 50px;
+    overflow: hidden;
+    transition: max-width 0.5s ease;
 }
 
 .contact p {
-    margin-left: 15px;
+    margin-left: 0px;
     margin-right: 25px;
     margin-bottom: 20px;
 }
@@ -379,7 +435,6 @@ h2::after {
     margin-top: 10px;
 }
 
-/* Footer */
 footer {
     background-color: var(--dark);
     color: #aaa;
