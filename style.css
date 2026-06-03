@@ -27,7 +27,10 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family: 'Lora', Georgia, serif;
+    /*font-family: 'Open Sans', Arial, Helvetica, sans-serif;*/
+    font-weight: 400;
     color: var(--dark);
     line-height: 1.6;
     background-color: var(--white);
@@ -91,7 +94,7 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -214,6 +217,7 @@ h2::after {
     border-top: 0px solid rgba(0, 0, 0, 0.02);
     border-right: 1px solid rgba(0, 0, 0, 0.02);
     border-bottom: 0px solid rgba(0, 0, 0, 0.02);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .project-card a {
@@ -382,4 +386,5 @@ footer {
     text-align: center;
     padding: 40px 20px;
     font-size: 0.9rem;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
