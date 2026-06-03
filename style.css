@@ -2,7 +2,8 @@
 :root {
     --primary: #2e7d32;
     /* Vert nature */
-    --primary-light: #e4fddf;
+    --primary-light: #dff6da;
+    --primary-light2: #c4fab9;
     /* Vert très clair pour les fonds */
     --accent: #1565c0;
     /* Bleu discret pour le contraste */
@@ -84,7 +85,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-light) 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--primary-light2) 0%, #ffffff 100%);
     padding: 100px 20px;
     text-align: center;
     clip-path: ellipse(120% 70% at 100% 30%);
