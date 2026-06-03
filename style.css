@@ -324,12 +324,47 @@ h2::after {
     top: 20px;
 }
 
+
 .contact img {
     width: 25px;
-    height: 25px;
+    height: auto;
     align-items: center;
-    margin-left: 20px;
-        margin-right: 25px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+.gmail img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.discord img {
+    width: 30px;
+    margin-bottom: 0px;
+}
+
+.gridContact {
+    display:inline-block;
+}
+
+
+.content {
+    opacity: 0;                
+    overflow: hidden;           
+    white-space: nowrap;     
+    transition: opacity 0.5s ease;     
+}
+
+.gridContact:hover .content {
+    opacity: 1;           
+}
+
+.gridContact:hover .contact {
+    max-width: 350px;               
+}
+
+.gridContact:hover .discord {
+    width: 200px;
 }
 
 .contact p.tag {
@@ -344,6 +379,10 @@ h2::after {
     display: flex;
     flex-direction: row;
     text-align: center;
+    width: auto;
+    max-width: 50px;
+    overflow: hidden; 
+    transition: max-width 0.5s ease;  
 }
 
 .contact p {
@@ -377,7 +416,6 @@ h2::after {
     margin-top: 10px;
 }
 
-/* Footer */
 footer {
     background-color: var(--dark);
     color: #aaa;
