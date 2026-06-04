@@ -183,6 +183,8 @@ nav ul li a:hover {
     max-width: none;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 h2 {
@@ -213,13 +215,49 @@ h2::after {
     margin-top: 10px;
 }
 
+/* le menu burger */
+
+.burger-menu {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menu span,
+.burger-menu span::before,
+.burger-menu span::after {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ff6b6b;
+    border-radius: 10px;
+    position: absolute;
+    transition: background 0.3s ease;
+}
+
+.burger-menu span::before {
+    content: "";
+    top: -10px;
+}
+
+.burger-menu span::after {
+    content: "";
+    bottom: -10px;
+}
+
 /* Grille des projets */
 
 .projects-grid {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     gap: 30px;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -448,4 +486,130 @@ footer {
     padding: 40px 20px;
     font-size: 0.9rem;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.plant {
+    display: inline-block;
+}
+
+.leaf {
+    transform-origin: bottom center;
+    transition: transform 0.5s ease;
+    position: absolute;
+    rotate: +180deg;
+    z-index: 100;
+}
+
+/* haut */
+.leaf1 {
+    left: 0%;
+    top: -26%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 19%;
+}
+
+.leaf2 {
+    left: 75%;
+    top: -25%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 18%;
+    transform: scaleX(-1);
+}
+
+/* milieu à droite */
+.leaf3 {
+    left: 95%;
+    top: 33%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 13%;
+    rotate: -100deg;
+}
+
+/* à gauche */
+.leaf4 {
+    left: -6%;
+    top: 30%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 10%;
+    rotate: +50deg;
+}
+
+.leaf5 {
+    left: -6%;
+    top: 45%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 14%;
+    rotate: +110deg;
+    transform: scaleX(-1);
+}
+
+/*à droite*/
+.leaf6 {
+    left: 90%;
+    top: 70%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 15%;
+    rotate: -40deg;
+    transform: scaleX(-1);
+}
+
+.leaf7 {
+    left: 94%;
+    top: 15%;
+    width: auto;
+    height: auto;
+    min-width: 80px;
+    max-width: 7%;
+    rotate: -175deg;
+}
+
+
+
+.plant:hover .leaf {
+    transform: rotate(-20deg);
+}
+
+.plant:hover .leaf2 {
+    transform: scaleX(-1) rotate(-20deg);
+}
+
+.plant:hover .leaf5 {
+    transform: scaleX(-1) rotate(-20deg);
+}
+
+.plant:hover .leaf6 {
+    transform: scaleX(-1) rotate(-20deg);
+}
+
+
+@media (max-width: 1400px) {
+    .leaf {
+        display: none;
+    }
+}
+
+@keyframes leaf-open {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    70% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
 }
